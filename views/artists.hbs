@@ -1,0 +1,22 @@
+<h1>Artists list</h1>
+<form action="/artists" method="POST">
+    <h3>Add a new Artist</h3>
+    <input type="text" name="name" placeholder="Artist Name">
+    <input type="submit" value="Create">
+</form>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Artist</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each artists}}
+        <tr>
+            <td>{{ArtistId}}</td>
+            <td>{{Name}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

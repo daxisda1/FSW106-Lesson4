@@ -1,0 +1,23 @@
+<h1>Tracks list</h1>
+<form action="/tracks" method="POST">
+    <h3>Find tracks</h3>
+    <input type="number" name="minutes" placeholder="Minutes">
+    <input type="number" name="seconds" placeholder="Seconds">
+    <input type="submit" value="Find">
+</form>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Track</th>
+            <th>Length</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tracks}}
+        <tr>
+            <td>{{Track}}</td>
+            <td>{{Length}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
